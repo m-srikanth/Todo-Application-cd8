@@ -1,0 +1,44 @@
+root@6e4f3f1fc54c:/home/workspace/nodejs/coding-practices/coding-practice-8a# npm install
+ WARN  deprecated node-pre-gyp@0.11.0: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future
+ WARN  deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+ WARN  deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+ WARN  deprecated har-validator@5.1.5: this library is no longer supported
+ WARN  deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+Packages: +263
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /home/workspace/.pnpm-store/v3
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 264, reused 263, downloaded 0, added 263, done
+node_modules/.pnpm/sqlite3@5.0.2/node_modules/sqlite3: Running install script, done in 3.5s
+node_modules/.pnpm/nodemon@2.0.7/node_modules/nodemon: Running postinstall script, done in 126ms
+
+dependencies:
++ express 4.17.1 (4.18.2 is available)
++ nodemon 2.0.7 (3.0.1 is available)
++ sqlite 4.0.19 (5.0.1 is available)
++ sqlite3 5.0.2 (5.1.6 is available)
+root@6e4f3f1fc54c:/home/workspace/nodejs/coding-practices/coding-practice-8a# sqlite3 todoApplication.db
+SQLite version 3.16.2 2017-01-06 16:32:41
+Enter ".help" for usage hints.
+sqlite> CREATE TABLE todo (id INT, todo TEXT, priority TEXT, status TEXT);
+sqlite> INSERT INTO todo (id, todo, priority, status) VALUES (1, "Learn HTML", "HIGH", "TO DO"), (2, "Learn JS", "MEDIUM", "DONE"), (3, "Learn CSS", "LOW", "DONE");
+sqlite> SELECT * FROM todo;
+1|Learn HTML|HIGH|TO DO
+2|Learn JS|MEDIUM|DONE
+3|Learn CSS|LOW|DONE
+sqlite> INSERT INTO todo (id, todo, priority, status) VALUES (4, "Learn NodeJS", "MEDIUM", "IN PROGRESS");
+sqlite> .exit
+root@6e4f3f1fc54c:/home/workspace/nodejs/coding-practices/coding-practice-8a# sqlite3 todoApplication.db                
+SQLite version 3.16.2 2017-01-06 16:32:41
+Enter ".help" for usage hints.
+sqlite> .tables
+todo
+sqlite> SELECT * FROM todo;
+1|Learn HTML|HIGH|TO DO
+2|Learn JS|MEDIUM|DONE
+3|Learn CSS|LOW|DONE
+4|Learn NodeJS|MEDIUM|IN PROGRESS
+sqlite> .exit
+root@6e4f3f1fc54c:/home/workspace/nodejs/coding-practices/coding-practi
+ce-8a# 
